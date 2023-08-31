@@ -1,0 +1,88 @@
+/* Add the confetti animation keyframes */
+@keyframes confettiAnimation {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+/* Your existing styles */
+.App {
+  text-align: center;
+}
+
+
+
+.quiz-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #c9b2ee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4.5rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(215, 30, 184);
+}
+
+.question-section {
+  margin-bottom: 20px;
+}
+
+.question-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.question-text {
+  font-size: 19px;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #06020e;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.score-section {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* Apply confetti animation to the .confetti class */
+.confetti {
+  animation: confettiAnimation 0.5s ease-in-out infinite;
+}
